@@ -1976,7 +1976,7 @@ namespace RobotLocalization
 
       if (loop_elapsed_time > loop_cycle_time)
       {
-        ROS_WARN_STREAM_DELAYED_THROTTLE(1.0, "Failed to meet update rate! Took " << std::setprecision(20) <<
+        ROS_WARN_STREAM_DELAYED_THROTTLE(300.0, "Failed to meet update rate! Took " << std::setprecision(20) <<
           loop_elapsed_time.toSec() << " seconds. Try decreasing the rate, limiting sensor output frequency, or "
           "limiting the number of sensors.");
       }
