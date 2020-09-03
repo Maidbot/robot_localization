@@ -1859,7 +1859,7 @@ namespace RobotLocalization
     const double loop_elapsed = (event.current_real - event.last_expected).toSec();
     if (loop_elapsed > 2./frequency_)
     {
-      ROS_WARN_STREAM("Failed to meet update rate! Took " << std::setprecision(20) << loop_elapsed);
+      ROS_WARN_STREAM_DELAYED_THROTTLE(300.0, "Failed to meet update rate! Took " << std::setprecision(20) << loop_elapsed);
     }
 
     // Wait for the filter to be enabled
